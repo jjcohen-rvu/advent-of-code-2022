@@ -1,11 +1,11 @@
 (ns advent.day6)
 (defn search
   [n]
-  (loop [t (->> (slurp "/Users/james/learn/advent/resources/day6.txt"))
-         acc offset]
+  (loop [text (->> (slurp "/Users/james/learn/advent/resources/day6.txt"))
+         acc n]
     (if
-     (= (count (distinct (take offset t))) offset)
+     (= (count (distinct (take n text))) n)
       acc
-      (recur (rest t) (inc acc)))))
+      (recur (rest text) (inc acc)))))
 (prn (search 4))
 (prn (search 14))
