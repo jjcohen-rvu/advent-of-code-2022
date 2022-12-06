@@ -1,6 +1,4 @@
-(ns advent.day6
-  (:require [clojure.string :as string]
-            [clojure.set :refer [subset? intersection]]))
+(ns advent.day6)
 (defn search
   [n]
   (loop [t (->> (slurp "/Users/james/learn/advent/resources/day6.txt"))
